@@ -4,7 +4,7 @@ import {
   IsString,
   IsUrl,
   IsOptional,
-  MinLength,
+  MinLength
 } from 'class-validator';
 import { Transform } from 'class-transformer';
 import { IUser } from '../types/models.interfaces';
