@@ -43,6 +43,45 @@ function createPostmanCollection(): void {
   const baseUrl = '{{base_url}}';
 
   const endpoints: Record<string, Endpoint[]> = {
+    Connectors: [
+      { name: 'Get All Connectors', method: 'GET', path: '/connectors' },
+      {
+        name: 'Get Connector by Name',
+        method: 'GET',
+        path: '/connectors/name/{{name}}',
+      },
+      {
+        name: 'Get Connector by ID',
+        method: 'GET',
+        path: '/connectors/id/{{id}}',
+      },
+      { name: 'Create Connector', method: 'POST', path: '/connectors' },
+      {
+        name: 'Update Connector by Name',
+        method: 'PUT',
+        path: '/connectors/name/{{name}}',
+      },
+      {
+        name: 'Update Connector by ID',
+        method: 'PUT',
+        path: '/connectors/id/{{id}}',
+      },
+      {
+        name: 'Delete All Connectors',
+        method: 'DELETE',
+        path: '/connectors/all',
+      },
+      {
+        name: 'Delete Connector by Name',
+        method: 'DELETE',
+        path: '/connectors/name/{{name}}',
+      },
+      {
+        name: 'Delete Connector by ID',
+        method: 'DELETE',
+        path: '/connectors/id/{{id}}',
+      },
+    ],
     Users: [
       { name: 'Get All Users', method: 'GET', path: '/users' },
       {
