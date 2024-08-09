@@ -43,6 +43,60 @@ function createPostmanCollection(): void {
   const baseUrl = '{{base_url}}';
 
   const endpoints: Record<string, Endpoint[]> = {
+    Shipments: [
+      { name: 'Get All Shipments', method: 'GET', path: '/shipments' },
+      {
+        name: 'Get Shipment by Name',
+        method: 'GET',
+        path: '/shipments/name/{{name}}',
+      },
+      {
+        name: 'Get Shipment by Tracking Number',
+        method: 'GET',
+        path: '/shipments/trackingNumber/{{trackingNumber}}',
+      },
+      {
+        name: 'Get Shipment by ID',
+        method: 'GET',
+        path: '/shipments/id/{{id}}',
+      },
+      { name: 'Create Shipment', method: 'POST', path: '/shipments' },
+      {
+        name: 'Update Shipment by Name',
+        method: 'PUT',
+        path: '/shipments/name/{{name}}',
+      },
+      {
+        name: 'Update Shipment by Tracking Number',
+        method: 'PUT',
+        path: '/shipments/trackingNumber/{{trackingNumber}}',
+      },
+      {
+        name: 'Update Shipment by ID',
+        method: 'PUT',
+        path: '/shipments/id/{{id}}',
+      },
+      {
+        name: 'Delete All Shipments',
+        method: 'DELETE',
+        path: '/shipments/all',
+      },
+      {
+        name: 'Delete Shipment by Name',
+        method: 'DELETE',
+        path: '/shipments/name/{{name}}',
+      },
+      {
+        name: 'Delete Shipment by Tracking Number',
+        method: 'DELETE',
+        path: '/shipments/trackingNumber/{{trackingNumber}}',
+      },
+      {
+        name: 'Delete Shipment by ID',
+        method: 'DELETE',
+        path: '/shipments/id/{{id}}',
+      },
+    ],
     Connectors: [
       { name: 'Get All Connectors', method: 'GET', path: '/connectors' },
       {

@@ -16,3 +16,16 @@ export interface IConnector {
   apiUrl?: MaybeString;
   apiKey?: MaybeString;
 }
+
+export interface IShipment {
+  id: string | undefined;
+  name: string;
+  trackingNumber?: MaybeString;
+  originCountry?: MaybeString;
+  finalCountry?: MaybeString;
+  departureDate?: MaybeString;
+  arrivalDate?: MaybeString;
+  status?: MaybeString;
+  provider?: MaybeString;
+  courier?: MaybeString;
+}

@@ -53,3 +53,53 @@ export class AbstractConnectorPublic {
     this.apiUrl = null;
   }
 }
+
+export interface IShipmentPublic {
+  id: string;
+  name: string;
+  trackingNumber?: MaybeString;
+  originCountry?: MaybeString;
+  finalCountry?: MaybeString;
+  departureDate?: MaybeString;
+  arrivalDate?: MaybeString;
+  status?: MaybeString;
+  provider?: MaybeString;
+  courier?: MaybeString;
+}
+
+// Abstract class representing a public shipment with metadata
+export class AbstractShipmentPublic {
+  @Property()
+  id!: string;
+  @Property()
+  name!: string;
+  @Property()
+  trackingNumber?: MaybeString;
+  @Property()
+  originCountry?: MaybeString;
+  @Property()
+  finalCountry?: MaybeString;
+  @Property()
+  departureDate?: MaybeString;
+  @Property()
+  arrivalDate?: MaybeString;
+  @Property()
+  status?: MaybeString;
+  @Property()
+  provider?: MaybeString;
+  @Property()
+  courier?: MaybeString;
+
+  constructor() {
+    this.id = '';
+    this.name = '';
+    this.trackingNumber = null;
+    this.originCountry = null;
+    this.finalCountry = null;
+    this.departureDate = null;
+    this.arrivalDate = null;
+    this.status = null;
+    this.provider = null;
+    this.courier = null;
+  }
+}
